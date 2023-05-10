@@ -19,7 +19,7 @@ public class ClientService {
 
     public ClientService(Connection connection) throws SQLException {
         createSt = connection.prepareStatement(
-                "INSERT INTO client (name) VALUES ?"
+                "INSERT INTO client (name) VALUES (?)"
         );
         maxIdByClient = connection.prepareStatement(
                 "SELECT max(id) AS maxId FROM client"
@@ -66,12 +66,12 @@ public class ClientService {
     public void setName(long id, String name) throws SQLException {
         updateSt.setString(1, name);
         updateSt.setLong(2, id);
-        updateSt.executeQuery();
+        updateSt.executeUpdate();
     }
 
     public void deleteById(long id) throws SQLException {
         deleteSt.setLong(1, id);
-        deleteSt.executeQuery();
+        deleteSt.executeUpdate();
     }
 
     public List<Client> listAll() throws SQLException {

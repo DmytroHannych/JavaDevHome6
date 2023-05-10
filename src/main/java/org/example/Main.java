@@ -14,8 +14,9 @@ public class Main {
         databaseInitService.InitData();
         ClientService clientService = new ClientService(connection);
         clientService.create("Petro");
-      clientService.getById(2);
-        clientService.setName(3,"Leonid");
-        clientService.listAll();
+//        System.out.println("clientService.getById(2) = " + clientService.getById(2));
+//        clientService.setName(3,"Leonid");
+//        clientService.listAll();
+//        clientService.deleteById(1);
     }
 }
