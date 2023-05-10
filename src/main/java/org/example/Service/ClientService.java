@@ -48,6 +48,7 @@ public class ClientService {
             resultSet.next();
             id = resultSet.getLong("maxId");
         }
+        createSt.close();
         return id;
     }
 
@@ -60,6 +61,7 @@ public class ClientService {
             return null;
         }
         String name = resultSet.getString("name");
+        readStById.close();
         return name;
     }
 
@@ -67,11 +69,13 @@ public class ClientService {
         updateSt.setString(1, name);
         updateSt.setLong(2, id);
         updateSt.executeUpdate();
+        updateSt.close();
     }
 
     public void deleteById(long id) throws SQLException {
         deleteSt.setLong(1, id);
         deleteSt.executeUpdate();
+        deleteSt.close();
     }
 
     public List<Client> listAll() throws SQLException {
