@@ -13,11 +13,11 @@ public class Main {
         DatabaseInitService databaseInitService = new DatabaseInitService();
         databaseInitService.InitData();
         ClientService clientService = new ClientService(connection);
-         clientService.create("Petro");
+        clientService.create("Igor");
         clientService.getById(2);
         clientService.setName(3,"Leonid");
         clientService.listAll();
         clientService.deleteById(1);
-        connection.close();
+//        connection.close();
     }
 }
