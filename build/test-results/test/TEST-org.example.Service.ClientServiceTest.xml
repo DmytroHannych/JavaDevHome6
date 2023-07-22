@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.example.Service.ClientServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-07-22T19:06:15" hostname="DESKTOP-C9L4VBO" time="0.621">
+  <properties/>
+  <testcase name="testUpdate()" classname="org.example.Service.ClientServiceTest" time="0.621"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[лип. 22, 2023 10:06:15 ПП org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.17.0 by Redgate
+лип. 22, 2023 10:06:15 ПП org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+лип. 22, 2023 10:06:15 ПП org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+лип. 22, 2023 10:06:15 ПП org.flywaydb.core.internal.database.base.BaseDatabaseType createDatabase
+INFO: Database: jdbc:h2:mem:test6 (H2 2.1)
+лип. 22, 2023 10:06:15 ПП org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory allAppliedMigrations
+INFO: Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+лип. 22, 2023 10:06:15 ПП org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 2 migrations (execution time 00:00.025s)
+лип. 22, 2023 10:06:15 ПП org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory create
+INFO: Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+лип. 22, 2023 10:06:15 ПП org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": << Empty Schema >>
+лип. 22, 2023 10:06:15 ПП org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "1 - create table"
+лип. 22, 2023 10:06:15 ПП org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "2 - instante to table data"
+лип. 22, 2023 10:06:15 ПП org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.079s)
+]]></system-err>
+</testsuite>
