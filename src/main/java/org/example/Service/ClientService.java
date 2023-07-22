@@ -19,7 +19,7 @@ public class ClientService {
 
     public ClientService(Connection connection) throws SQLException {
         createSt = connection.prepareStatement(
-                "INSERT INTO client (id, name) VALUES (?, ?)"
+                "INSERT INTO client ( id, name) VALUES (?,?)"
         );
         maxIdByClient = connection.prepareStatement(
                 "SELECT max(id) AS maxId FROM client"

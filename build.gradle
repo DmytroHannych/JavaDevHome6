@@ -13,8 +13,8 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
     compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.26'
     implementation group: 'org.flywaydb', name: 'flyway-core', version: '9.17.0'
-
-
+    implementation 'org.hibernate.orm:hibernate-core:6.2.3.Final'
+//    testImplementation group: 'org.junit.platform', name: 'junit-platform-launcher', version: '1.8.1'
 }
 jar {
     archiveFileName = "myname.jar"
@@ -22,6 +22,7 @@ jar {
         attributes 'Main-Class': 'gradel.Main'
     }
     from configurations.compileClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
 }
 test {
     useJUnitPlatform()

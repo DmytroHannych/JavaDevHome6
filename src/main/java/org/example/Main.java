@@ -10,14 +10,14 @@ import java.sql.SQLException;
 public class Main {
     public static void main(String[] args) throws SQLException {
        Connection connection = DriverManager.getConnection("jdbc:h2:~/test6");
-        DatabaseInitService databaseInitService = new DatabaseInitService();
-        databaseInitService.InitData();
-        ClientService clientService = new ClientService(connection);
-        clientService.create("Igor");
-        clientService.getById(2);
-        clientService.setName(3,"Leonid");
-        clientService.listAll();
-        clientService.deleteById(1);
-//        connection.close();
+//        DatabaseInitService databaseInitService = new DatabaseInitService();
+//        databaseInitService.InitData();
+//        ClientService clientService = new ClientService(connection);
+//        clientService.create("Igor");
+//        clientService.getById(2);
+//        clientService.setName(3,"Leonid");
+//        System.out.println("clientService.listAll() = " + clientService.listAll());
+//        clientService.deleteById(1);
+        connection.close();
     }
 }
