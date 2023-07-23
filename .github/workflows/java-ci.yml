@@ -1,8 +1,8 @@
 name: Java-CI
 on:
   pull_request:
-    branches:
-    - master
+    branches: [ master ]
+
 
 jobs:
   build:
@@ -14,9 +14,10 @@ jobs:
             with:
               java-version: 17
               distribution: 'temurin'
+              architecture: x64
           - name: Grant permissions  to gradlew
             run: chmod +x gradlew
-          - name: Unit with Gradlew
-            run: ./gradlew test
+          - name: JUnit with Gradlew
+            run: ./gradlew build
 
 
